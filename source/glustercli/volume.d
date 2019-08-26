@@ -65,8 +65,8 @@ void volumeStop(string volname, bool force=false)
 
 void volumeRestart(string volname)
 {
-    stopVolume(volname, true);
-    startVolume(volname, true);
+    volumeStop(volname, true);
+    volumeStart(volname, true);
 }
 
 void volumeDelete(string volname)
