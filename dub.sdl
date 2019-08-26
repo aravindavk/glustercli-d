@@ -1,0 +1,7 @@
+name "glustercli"
+description "D language bindings for Gluster CLI"
+authors "Aravinda VK <mail@aravindavk.in>"
+copyright "Copyright © 2019, Aravinda VK <mail@aravindavk.in>"
+license "Apache-2.0"
+dependency "arsd-official:dom" version="~>4.0.2"
+targetType "library"

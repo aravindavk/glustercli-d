@@ -1,0 +1,16 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/glustercli
+glustercli.so
+glustercli.dylib
+glustercli.dll
+glustercli.a
+libglustercli.a
+glustercli.lib
+glustercli-test-*
+*.exe
+*.o
+*.obj
+*.lst
