@@ -89,7 +89,7 @@ struct Option
             [
                 "name": JSONValue(name),
                 "value": JSONValue(value),
-                "volume_id": JSONValue(volumeId)
+                "volumes_id": JSONValue(volumeId)
             ]
         );
     }
@@ -120,7 +120,7 @@ struct SubVolume
                 "type": JSONValue(type),
                 "bricks": JSONValue(bricks.map!(brick => brick.toJson).array),
                 "num_bricks": JSONValue(numBricks),
-                "volume_id": JSONValue(volumeId)
+                "volumes_id": JSONValue(volumeId)
             ]
         );
     }
@@ -151,7 +151,7 @@ struct Brick
             [
                 "host": JSONValue(host),
                 "path": JSONValue(path),
-                "peer_id": JSONValue(nodeid),
+                "peers_id": JSONValue(nodeid),
                 "state": JSONValue(state),
                 "type": JSONValue(type),
                 "port": JSONValue(port),
@@ -164,8 +164,8 @@ struct Brick
                 "device": JSONValue(device),
                 "block_size": JSONValue(blockSize),
                 "mount_options": JSONValue(mountOptions),
-                "volume_id": JSONValue(volumeId),
-                "subvol_id": JSONValue(subvolId),
+                "volumes_id": JSONValue(volumeId),
+                "subvols_id": JSONValue(subvolId),
             ]
         );
     }
