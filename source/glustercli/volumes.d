@@ -417,11 +417,15 @@ mixin template volumesFunctions()
 
     Volume getVolume(string name, bool status = false)
     {
+        import std.range;
+
         auto cmd = ["volume", "info", name];
 
         auto outlines = executeGlusterCmdXml(cmd);
         auto vols = parseVolumeInfo(outlines);
-        return vols[0];
+        if (vols.empty)
+            throw new GlusterCommandException("Volume not found");
+
         if (!status)
             return vols[0];
 
